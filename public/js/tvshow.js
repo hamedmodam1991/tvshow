@@ -20,8 +20,6 @@ function tvshow(e) {
             }
             if (t.style.opacity > 0) {
                 t.style.opacity -= 0.1;
-            } else {
-                clearInterval(fadeEffect);
             }
         }, 50)
     )

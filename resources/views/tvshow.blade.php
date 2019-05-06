@@ -4,7 +4,7 @@
 
     <div class="container">
 
-        <a href="./tv/create">
+        <a href="/tvshow/public/tv/create">
             <div style="margin-bottom:2%;padding: 2%">
                 <button type="submit" id="edit" class="btn btn-primary btn-lg " style="padding: 2%">
                     + create new quote
@@ -34,7 +34,7 @@
                         </ul>
                     </div>
                     <div id="{{ $tvshow->id }}">
-                        <form method="GET" action="{{ url()->current()}}/{{ $tvshow->id }}/edit">
+                        <form method="GET" action="/tvshow/public/tv/{{ $tvshow->id }}/edit">
                             @csrf
                             <button type="submit" id="edit" class="btn btn-primary">
                                 Edit
@@ -53,5 +53,5 @@
 @endsection
 
 @push('scripts')
-    <script  type="text/javascript" src="../resources/js/tvshow.js" ></script>
+    <script  type="text/javascript" src="{{ URL::asset('js/tvshow.js') }}" ></script>
 @endpush
